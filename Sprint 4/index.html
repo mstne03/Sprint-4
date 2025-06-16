@@ -4,10 +4,62 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="stylesheet" href="./src/styles/output.css">
+    <link rel="stylesheet" href="./src/styles/custom.css">
+    <title>Jokes API</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-pink-700 overflow-x-hidden overflow-y-hidden">
+    <header class="flex justify-between items-center p-9">
+      <div class="mx-7 my-1 text-amber-50 font-bold text-4xl">
+        <h1>Welcome!</h1>
+      </div>
+      <span>
+          <img 
+              src="./src/assets/img/bombilla.svg" 
+              alt="bombilla_icono"
+              class="img__bombilla hover:scale-125 active:scale-110 cursor-pointer transition-transform ease-in"
+          />
+      </span>
+    </header>
+
+    <main>
+        <section class="flex justify-center items-center flex-col">
+          <div class="flex flex-col">
+            <div class="mx-7 my-1 text-amber-50 font-bold text-3xl">
+              <h1>Rate this joke</h1>
+            </div>
+
+            <div class="flex mt-6">
+              <button id="1" class="score_btn font-bold text-amber-50 border-amber-50 shadow-xl bg-gradient-to-br from-red-400 via-pink-700 to-purple-950 border-4 rounded-xl hover:scale-110 active:opacity-60 active:scale-100 cursor-pointer transition-transform ease-in mx-4 p-2 px-4">
+                  1
+              </button>
+
+              <button id="2" class="score_btn font-bold text-amber-50 border-amber-50 shadow-xl bg-gradient-to-br from-red-400 via-pink-700 to-purple-950 border-4 rounded-xl hover:scale-110 active:opacity-60 active:scale-100 cursor-pointer transition-transform ease-in mx-4 p-2 px-4">
+                  2
+              </button>
+
+              <button id="3" class="score_btn font-bold text-amber-50 border-amber-50 shadow-xl bg-gradient-to-br from-red-400 via-pink-700 to-purple-950 border-4 rounded-xl hover:scale-110 active:opacity-60 active:scale-100 cursor-pointer transition-transform ease-in mx-4 p-2 px-4">
+                  3
+              </button>
+            </div>
+          </div>
+
+          <div id="joke" class="font-bold text-amber-50 text-center border-3 border-amber-50 mt-10 mb-14 bg-gradient-to-br from-red-400 to-pink-700 rounded-xl shadow-xl mx-6 min-h-60 min-w-85 md:min-w-xl sm:min-w- p-10 max-w-xl flex justify-center items-center">
+            <p id="joke__text"></p>
+          </div>
+
+          <div>
+            <button class="font-bold text-amber-50 header_btn border-amber-50 shadow-xl bg-gradient-to-br from-red-400 via-pink-700 to-purple-950 border-4 rounded-xl hover:scale-110 active:opacity-60 active:scale-100 cursor-pointer transition-transform ease-in mx-4 text-2xl p-2 px-4">
+                Next joke!
+            </button>
+          </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
