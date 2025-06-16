@@ -1,0 +1,12 @@
+.img__bombilla {
+    max-width: 80px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+@media (max-width: 640px) {
+    .img__bombilla {
+        max-width: 65px;
+    }
+}
