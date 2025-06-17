@@ -1,1 +1,1 @@
-import './UI/listeners.ts'
+import './UI/listeners'
