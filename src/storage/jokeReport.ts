@@ -1,4 +1,4 @@
-import type { SaveJoke } from '../logic/interfaces.ts'
+import type { SaveJoke } from '../utilities/interfaces.ts'
 
 let jokeReports : Array<SaveJoke> = [];
 

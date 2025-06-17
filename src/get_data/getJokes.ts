@@ -1,14 +1,9 @@
-import type { JokeJson, JokeJsonChuckNorris, err } from '../logic/interfaces.ts'
+import type { JokeJson, JokeJsonChuckNorris, err } from '../utilities/interfaces.ts'
 
-export default async function getJokes () : Promise<string> {
-    let jokeUrl : string = 'https://icanhazdadjoke.com/';
-    let otherJokeUrl : string = 'https://api.chucknorris.io/jokes/random';
-    let randNum : number = (Math.random()*10)+1;
 
+export default async function getJokes (jokeUrl : string) : Promise<string> {
     try {
-        let url : string = randNum >= 5 ? jokeUrl : otherJokeUrl;
-
-        let response : Response = await fetch(url, {
+        let response : Response = await fetch(jokeUrl, {
             method: 'GET',
             headers: {
             'Accept': 'application/json'
@@ -20,7 +15,8 @@ export default async function getJokes () : Promise<string> {
 
         let jsonJoke : JokeJson | JokeJsonChuckNorris = await response.json();
 
-        if ((jsonJoke as JokeJson).joke) return (jsonJoke as JokeJson).joke;
+        if ((jsonJoke as JokeJson).joke) 
+            return (jsonJoke as JokeJson).joke;
 
         return (jsonJoke as JokeJsonChuckNorris).value;
     }

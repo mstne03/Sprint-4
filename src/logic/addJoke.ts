@@ -1,13 +1,15 @@
-import type { SaveJoke } from './interfaces.ts'
+import type { SaveJoke } from '../utilities/interfaces.ts'
+import jokeReport from '../storage/jokeReport.ts'
+import getDate from '../get_data/getDate.ts'
 
-export default function addJoke(jokeText: string, jokeReports: Array<SaveJoke>, jokeDate:string): void {
+export default async function addJoke(jokeText: string): Promise<void> {
     let jokeObject: SaveJoke = {
         joke: jokeText,
         score: null,
-        date: jokeDate
+        date: getDate()
     }
     
-    jokeReports.push(jokeObject);
+    jokeReport.push(jokeObject);
 
-    console.log(jokeReports);
+    console.log(jokeReport);
 }
