@@ -1,6 +1,5 @@
-import getJokes from '../get_data/getJokes.ts'
-import randomizeUrl from '../utilities/urls.ts'
-
+import getJokes from '../get_data/getJokes'
+import randomizeUrl from '../utilities/urls'
 
 export default async function displayJoke () {
     let url: string = randomizeUrl();

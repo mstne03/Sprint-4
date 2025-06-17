@@ -1,4 +1,4 @@
-import jokeReport from '../storage/jokeReport.ts'
+import jokeReport from '../storage/jokeReport'
 
 export default function rateJoke (btn : HTMLButtonElement) {
     let joke = jokeReport[jokeReport.length-1];

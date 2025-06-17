@@ -1,6 +1,6 @@
-import displayJoke from '../logic/displayJoke.ts'
-import { jokeOutput } from '../UI/getNodes.ts'
-import addJoke from './addJoke.ts'
+import displayJoke from '../logic/displayJoke'
+import { jokeOutput } from '../UI/getNodes'
+import addJoke from './addJoke'
 
 export default async function writeJoke () {
     const pNode = document.createElement('p');

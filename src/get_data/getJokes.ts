@@ -1,4 +1,4 @@
-import type { JokeJson, JokeJsonChuckNorris, err } from '../utilities/interfaces.ts'
+import type { JokeJson, JokeJsonChuckNorris, err } from '../utilities/interfaces'
 
 
 export default async function getJokes (jokeUrl : string) : Promise<string> {

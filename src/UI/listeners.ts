@@ -1,13 +1,13 @@
-import { jokeButton, scoreButton } from './getNodes.ts'
-import writeJoke from '../logic/domModify.ts'
-import rateJoke from '../logic/rateJoke.ts'
+import { jokeButton, scoreButton } from './getNodes'
+import writeJoke from '../logic/domModify'
+import rateJoke from '../logic/rateJoke'
 
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     writeJoke();
 });
 
-jokeButton.addEventListener('click', async () => {
+jokeButton.addEventListener('click', () => {
     writeJoke();
 });
 

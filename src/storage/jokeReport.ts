@@ -1,4 +1,4 @@
-import type { SaveJoke } from '../utilities/interfaces.ts'
+import type { SaveJoke } from '../utilities/interfaces'
 
 let jokeReports : Array<SaveJoke> = [];
 
