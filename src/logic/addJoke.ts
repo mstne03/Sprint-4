@@ -6,8 +6,6 @@ export default function addJoke(jokeText: string, jokeReports: Array<SaveJoke>, 
         score: null,
         date: jokeDate
     }
-
-    if (jokeReports.some(joke => joke === jokeObject)) return console.log(`This joke ${jokeObject} is already in ${jokeReports}`);
     
     jokeReports.push(jokeObject);
 

@@ -4,6 +4,13 @@ interface JokeJson {
   status:number
 }
 
+interface JokeJsonChuckNorris {
+  icon_url:string,
+  id:string,
+  url:string,
+  value:string
+}
+
 interface err {
   name : string,
   message : string
@@ -15,4 +22,4 @@ interface SaveJoke {
     date : string
 }
 
-export type {JokeJson, err, SaveJoke };
+export type {JokeJson, JokeJsonChuckNorris, err, SaveJoke };
