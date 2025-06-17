@@ -2,6 +2,7 @@ import type { JokeJson, err } from '../logic/interfaces.ts'
 
 export default async function getJokes () : Promise<string> {
     let jokeUrl : string = 'https://icanhazdadjoke.com/';
+    let otherJokeUrl : string = '';
 
     try {
         let response : Response = await fetch(jokeUrl, {
