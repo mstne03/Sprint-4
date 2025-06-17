@@ -1,10 +1,13 @@
+import type { SaveJoke } from '../utilities/interfaces'
 import jokeReport from '../storage/jokeReport'
 import getDate from '../get_data/getDate'
-import jokeInstance from '../storage/jokeInstance'
 
 export default async function addJoke(jokeText: string): Promise<void> {
-    jokeInstance.joke = jokeText
-    jokeInstance.date = getDate()
+    let jokeInstance : SaveJoke = {
+        joke: jokeText,
+        score: null,
+        date: getDate()
+    }
     
     jokeReport.push(jokeInstance);
 
