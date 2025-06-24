@@ -1,12 +1,12 @@
 import { jokeButton, scoreButton } from './getNodes'
 import writeJoke from '../logic/domModify'
 import rateJoke from '../logic/rateJoke'
-import getMeteo from '../get_data/getMeteo'
+import getMeteoData from '../get_data/getMeteo'
 
 
 document.addEventListener('DOMContentLoaded', async () => {
     writeJoke();
-    console.log(await getMeteo());
+    console.log("Meteo: ",await getMeteoData());
 });
 
 jokeButton.addEventListener('click', () => {
