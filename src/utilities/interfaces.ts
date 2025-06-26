@@ -26,7 +26,7 @@ interface weatherData {
   current: {
     apparent_temperature: number,
     interval: number,
-    id_day:number,
+    is_day:number,
     precipitation: number,
     rain: number,
     relative_humidity_2m: number,
@@ -35,14 +35,23 @@ interface weatherData {
     weather_code: number
   },
   current_units: {
-    elevation: number,
-    generationtime_ms: number,
-    latitude: number,
-    longitude: number,
-    timezone: string,
-    timezone_abbreviation: string,
-    utc_offset_seconds: number,
+    apparent_temperature: string,
+    interval: string,
+    is_day: string,
+    precipitation: string,
+    rain: string,
+    relative_humidity_2m: string,
+    temperature_2m: string,
+    time: string,
+    weather_code: string
   },
+  elevation: number,
+  generationtime_ms: number,
+  latitude: number,
+  longitude: number,
+  timezone: string,
+  timezone_abbreviation: string,
+  utc_offset_seconds: number,
 }
 
 export type {JokeJson, JokeJsonChuckNorris, err, SaveJoke, weatherData };
